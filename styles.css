@@ -1,5 +1,10 @@
+:root {
+    --light-color: rgb(81, 117, 117);
+    --dark-color: rgb(8, 25, 39);
+}
+
 body {
-    background-color: rgb(49, 71, 71);
+    background-color: var(--light-color);
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
@@ -18,23 +23,34 @@ h1:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+h2 {
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.897);
+    transition:all 0.4s ease;
+}
+
+h2:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 .btn{
-    background-color: rgb(162, 191, 214);
-    border: 1px solid rgb(255, 255, 255);
-    color: rgb(49, 71, 71);
+    background-color: var(--dark-color);
+    border: 1px solid rgba(255, 255, 255, 0.671);
+    color: rgb(242, 242, 242);
     padding: 10px 20px;
     font-size: 1.2em;
     border-radius: 5px;
 }
 
 @keyframes backgroundShiftLight {
-    0% { background-color: rgb(49, 71, 71); }
-    100% { background-color: rgb(162, 191, 214); }
+    0% { background-color: var(--dark-color); }
+    100% { background-color: var(--light-color); }
 }
 
 @keyframes backgroundShiftDark {
-    0% { background-color: rgb(162, 191, 214); }
-    100% { background-color: rgb(49, 71, 71); }
+    0% { background-color: var(--light-color); }
+    100% { background-color: var(--dark-color); }
 }
 
 .btn:hover {
