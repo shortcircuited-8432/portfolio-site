@@ -1,1 +1,43 @@
+body {
+    background-color: rgb(49, 71, 71);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
 
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    transition:all 0.4s ease;
+}
+
+h1:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn{
+    background-color: rgb(162, 191, 214);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(49, 71, 71);
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+@keyframes backgroundShiftLight {
+    0% { background-color: rgb(49, 71, 71); }
+    100% { background-color: rgb(162, 191, 214); }
+}
+
+@keyframes backgroundShiftDark {
+    0% { background-color: rgb(162, 191, 214); }
+    100% { background-color: rgb(49, 71, 71); }
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
