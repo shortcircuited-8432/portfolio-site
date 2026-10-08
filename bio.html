@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>About Me</title>
-</head>
-<body>
-    <header class="site-header">
-        <nav class="navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bio.html">Bio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div style="position: fixed; bottom: 20px; right: 20px; display: flex; z-index: 9999;">
-            <button class="btn" id="bg-btn">Night Mode</button>
-    </div>
-    <p>
-        My name is Gideon Antonowicz. I went to high school at Amherst Regional High in Amherst, Massachusetts. Welcome to my portfolio!
-    </p>
-    <script src="main.js" async defer></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>About Me</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <!-- This uses jquery for headers and footers! -->
+        <script> 
+        $(function(){
+        $("#header").load("header.html"); 
+        $("#footer").load("footer.html"); 
+        });
+        </script> 
+        </head>
+    <body>
+        <div id="header"></div>
+        <div style="position: fixed; bottom: 20px; right: 20px; display: flex; z-index: 9999;">
+                <button class="btn" id="bg-btn">Night Mode</button>
+        </div>
+        <p>
+            My name is Gideon Antonowicz. I went to high school at Amherst Regional High in Amherst, Massachusetts. Welcome to my portfolio!
+        </p>
+        <script src="main.js" async defer></script>
+    </body>
 </html>
