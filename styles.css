@@ -1,17 +1,43 @@
 :root {
-    --light-color: rgb(101, 131, 161);
-    --dark-color: rgb(8, 25, 39);
+    --light-color: #6583a1;
+    --dark-color: #081927;
+    --dark-grad: linear-gradient(0deg,rgba(8, 25, 39, 1) 0%, rgb(37, 60, 83) 100%);
+    --light-grad: linear-gradient(0deg,rgb(38, 52, 66) 0%, rgba(101, 131, 161, 1) 100%);
 }
 
 body {
-    background-color: var(--light-color);
+    height: 100%;
+    isolation: isolate;
+    background: var(--light-grad);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
     padding: 50px;
+    overflow: auto;
 }
 
-h1 {
+body.theme-loading::before {
+    transition: none;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--dark-grad);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.dark-mode::before {
+    opacity: 1;
+}
+
+.bigheader {
     font-size: 3em;
     margin-bottom: 20px;
     color: rgb(255, 255, 255);
@@ -45,16 +71,6 @@ h2:hover {
 
 .btn.shadow{
     box-shadow: 0px 4px 40x rgba(0, 0, 0, 0.2);
-}
-
-@keyframes backgroundShiftLight {
-    0% { background-color: var(--dark-color); }
-    100% { background-color: var(--light-color); }
-}
-
-@keyframes backgroundShiftDark {
-    0% { background-color: var(--light-color); }
-    100% { background-color: var(--dark-color); }
 }
 
 .btn:hover {
@@ -97,4 +113,21 @@ a::after {
 
 a:hover::after {
     width: 100%;
+}
+
+.text-box {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    /* make grid background */
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #dfdfdf81 1px, rgba(0, 0, 0, 0) 1px);
+    /* end grid background code */
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    transform: translate(-50%);
+    margin: auto;
 }
