@@ -26,19 +26,20 @@ if (bgBtn) {
     });
 }
 
+let state = true;
+
 bgBtn.addEventListener('click', function() {
     state = !state;
     document.body.classList.toggle('dark-mode', !state);
+    document.body.classList.remove('notransition');
     if (state) {
         bgBtn.style.backgroundColor = darkColor;
         bgBtn.style.color = 'white';
         bgBtn.textContent = 'Night Mode'
-        document.body.classList.remove('transition');
     }else{
         bgBtn.style.backgroundColor = lightColor;
         bgBtn.style.color = 'black';
         bgBtn.textContent = 'Light Mode'
-        document.body.classList.remove('transition');
     }
 });
 
