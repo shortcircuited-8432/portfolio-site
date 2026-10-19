@@ -117,10 +117,10 @@ a:hover::after {
 
 .text-box {
     position: fixed;
-    top: 25%;
     left: 50%;
     width: 50%;
     height: 100%;
+    text-align: left;
     /* make grid background */
     background-size: 40px 40px;
     background-image: radial-gradient(circle, #dfdfdf81 1px, rgba(0, 0, 0, 0) 1px);
@@ -130,4 +130,20 @@ a:hover::after {
     padding: 10px;
     transform: translate(-50%);
     margin: auto;
+}
+
+.cog-container {
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.spinning-cog {
+    animation: spin 2s linear infinite;
+    transform-origin: center;
+    fill: #b4c1d1; /* Change cog color here */
 }
